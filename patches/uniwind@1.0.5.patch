@@ -1,0 +1,81 @@
+diff --git a/dist/common/core/config/config.common.js b/dist/common/core/config/config.common.js
+index 34b07e798e45d9efaf6d7fc670b91fe8b9984c6b..e1adb7bc9e71752e836b7f4e7b683e109103546b 100644
+--- a/dist/common/core/config/config.common.js
++++ b/dist/common/core/config/config.common.js
+@@ -40,10 +40,10 @@ class UniwindConfigBuilder {
+     try {
+       if (theme === SYSTEM_THEME) {
+         this.#hasAdaptiveThemes = true;
+-        this.#currentTheme = this.colorScheme;
+         if (_reactNative.Platform.OS !== "web") {
+-          _reactNative.Appearance.setColorScheme(void 0);
++          _reactNative.Appearance.setColorScheme('unspecified');
+         }
++        this.#currentTheme = this.colorScheme;
+         return;
+       }
+       if (!this.themes.includes(theme)) {
+@@ -52,7 +52,7 @@ class UniwindConfigBuilder {
+       this.#hasAdaptiveThemes = false;
+       this.#currentTheme = theme;
+       if (_reactNative.Platform.OS !== "web") {
+-        _reactNative.Appearance.setColorScheme(isAdaptiveTheme ? this.#currentTheme : void 0);
++        _reactNative.Appearance.setColorScheme(isAdaptiveTheme ? this.#currentTheme : 'unspecified');
+       }
+     } finally {
+       if (prevTheme !== this.#currentTheme) {
+diff --git a/dist/module/core/config/config.common.js b/dist/module/core/config/config.common.js
+index a0979b6946753ea5a82ecdcdbd72362272437b8d..e35707c240ee3ba1d20c95564bbcd7948584fb8d 100644
+--- a/dist/module/core/config/config.common.js
++++ b/dist/module/core/config/config.common.js
+@@ -34,10 +34,10 @@ export class UniwindConfigBuilder {
+     try {
+       if (theme === SYSTEM_THEME) {
+         this.#hasAdaptiveThemes = true;
+-        this.#currentTheme = this.colorScheme;
+         if (Platform.OS !== "web") {
+-          Appearance.setColorScheme(void 0);
++          Appearance.setColorScheme('unspecified');
+         }
++        this.#currentTheme = this.colorScheme;
+         return;
+       }
+       if (!this.themes.includes(theme)) {
+@@ -46,7 +46,7 @@ export class UniwindConfigBuilder {
+       this.#hasAdaptiveThemes = false;
+       this.#currentTheme = theme;
+       if (Platform.OS !== "web") {
+-        Appearance.setColorScheme(isAdaptiveTheme ? this.#currentTheme : void 0);
++        Appearance.setColorScheme(isAdaptiveTheme ? this.#currentTheme : 'unspecified');
+       }
+     } finally {
+       if (prevTheme !== this.#currentTheme) {
+diff --git a/src/core/config/config.common.ts b/src/core/config/config.common.ts
+index ac029e797db44c263d329a803efc38fabce96fe6..c6b442ecdfdce0585b5fc1c7b7827af3fd370622 100644
+--- a/src/core/config/config.common.ts
++++ b/src/core/config/config.common.ts
+@@ -48,12 +48,12 @@ export class UniwindConfigBuilder {
+         try {
+             if (theme === SYSTEM_THEME) {
+                 this.#hasAdaptiveThemes = true
+-                this.#currentTheme = this.colorScheme
+-
+                 if (Platform.OS !== 'web') {
+-                    Appearance.setColorScheme(undefined)
++                    Appearance.setColorScheme('unspecified')
+                 }
+ 
++                this.#currentTheme = this.colorScheme
++
+                 return
+             }
+ 
+@@ -65,7 +65,7 @@ export class UniwindConfigBuilder {
+             this.#currentTheme = theme
+ 
+             if (Platform.OS !== 'web') {
+-                Appearance.setColorScheme(isAdaptiveTheme ? this.#currentTheme as ColorScheme : undefined)
++                Appearance.setColorScheme(isAdaptiveTheme ? this.#currentTheme as ColorScheme : 'unspecified')
+             }
+         } finally {
+             if (prevTheme !== this.#currentTheme) {

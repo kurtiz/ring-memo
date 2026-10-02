@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "uniwind";
+
+@theme static {
+  --color-background: #10171A;
+  --color-surface: #1B262A;
+  --color-ink: #F6F8F7;
+  --color-muted: #A9B8B8;
+  --color-accent: #78D9C2;
+}

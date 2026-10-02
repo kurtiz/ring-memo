@@ -1,0 +1,3 @@
+# RingMemo agent notes
+
+Android-first Expo/React Native app. Keep route files in `apps/mobile/src/app` and non-route code elsewhere. Before changing Expo or React Native APIs, read the installed Expo major version and its matching docs at `https://docs.expo.dev/versions/v<major>.0.0/`, then consult `https://docs.expo.dev/llms.txt` for the relevant page. Use pnpm and run `pnpm lint` and `pnpm typecheck` before finishing code changes. Do not hand-edit generated `apps/mobile/android` or `apps/mobile/ios` directories. Treat cellular call recording as unproven until tested on a physical Android device.

@@ -1,0 +1,26 @@
+packages:
+  - 'apps/*'
+allowBuilds:
+  '@prisma/client': false
+  better-sqlite3: false
+  esbuild: true
+  unrs-resolver: true
+  workerd: true
+minimumReleaseAgeExclude:
+  - '@expo/cli@57.0.27'
+  - '@expo/router-server@57.0.11'
+  - babel-preset-expo@57.0.13
+  - expo-modules-core@57.0.19
+  - expo-modules-jsi@57.1.1
+  - expo@57.0.25
+  - '@expo/ui@57.0.20'
+  - expo-glass-effect@57.0.4
+  - expo-linking@57.0.11
+  - expo-router@57.0.23
+  - expo-background-task@57.0.20
+  - expo-notifications@57.0.21
+  - expo-sharing@57.0.22
+  - expo-task-manager@57.0.20
+  - expo-build-properties@57.0.22
+patchedDependencies:
+  uniwind@1.0.5: patches/uniwind@1.0.5.patch

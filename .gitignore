@@ -1,0 +1,14 @@
+node_modules/
+.pnpm-store/
+.expo/
+dist/
+apps/mobile/android/
+apps/mobile/ios/
+apps/mobile/.env.local
+apps/mobile/.env.hotupdater
+apps/worker/wrangler.jsonc
+apps/worker/.dev.vars
+.wrangler/
+.hot-updater/
+*.tsbuildinfo
+.DS_Store

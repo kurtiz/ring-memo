@@ -1,0 +1,7 @@
+{
+  "name": "ringmemo-auth",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [{ "binding": "DB", "database_name": "ringmemo-auth", "database_id": "REPLACE_WITH_NEW_DATABASE_ID" }]
+}

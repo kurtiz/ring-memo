@@ -1,0 +1,12 @@
+{
+  "name": "ringmemo",
+  "private": true,
+  "packageManager": "pnpm@11.23.0",
+  "scripts": {
+    "start": "pnpm --filter @ringmemo/mobile start",
+    "android": "pnpm --filter @ringmemo/mobile android",
+    "lint": "pnpm -r --if-present lint",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "check:expo": "cd apps/mobile && pnpm dlx expo-doctor"
+  }
+}

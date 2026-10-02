@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "RingMemo",
+    "slug": "ringmemo",
+    "scheme": "ringmemo",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "android"
+    ],
+    "icon": "./assets/icons/app.png",
+    "plugins": [
+      "expo-router",
+      [
+        "@hot-updater/react-native",
+        {
+          "channel": "production"
+        }
+      ],
+      "expo-secure-store",
+      "expo-sqlite",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "buildArchs": [
+              "arm64-v8a"
+            ]
+          }
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.kompyler.ringmemo",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/foreground.png",
+        "monochromeImage": "./assets/icons/monochrome.png",
+        "backgroundColor": "#10171A"
+      }
+    },
+    "extra": {
+      "router": {}
+    }
+  }
+}
