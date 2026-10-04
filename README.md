@@ -14,7 +14,13 @@ Run `pnpm lint`, `pnpm typecheck`, and `pnpm check:expo`. Use an Android develop
 
 ## Recording scope
 
-The app currently does **not** record calls. Android restricts direct cellular uplink/downlink capture to privileged system apps. A real device feasibility test must determine any supported recording path before adding capture controls or promising automatic recording. Do not use Accessibility services to obtain remote call audio. Test with consent and a persistent visible recording indicator.
+The app includes an experimental Shizuku-backed cellular capture diagnostic, a native call-monitoring service, and an offline recording library. **Capture on the Galaxy A21s / Android 12 remains unproven.** Automatic recording starts disabled and requires five incoming and five outgoing handset tests with both voices confirmed, including background and locked-screen tests, on the current firmware/helper configuration.
+
+Arm one test call from Recording setup, inspect its result in the library, and save an honest intelligibility review. Shizuku/ADB or root does not guarantee VOICE_CALL access. There is no Accessibility capture or microphone-only fallback. Record only with the required consent; armed and recording sessions have visible notifications. Reopen and rearm after a reboot or process interruption.
+
+The library supports playback/seeking, title and note editing, search, deletion, and explicit WAV export. Audio stays in app-private storage, metadata in SQLite, and Android app backup is disabled. No account or cloud service is needed. Uninstalling deletes local recordings.
+
+See [device testing and APK build instructions](docs/device-testing.md) and the [current feasibility report](docs/feasibility-report.md). Run `pnpm test` for recording policy tests in addition to lint/typecheck/Expo Doctor. Native policy tests run through the Android module's Gradle unit-test task.
 
 ## Optional services
 
