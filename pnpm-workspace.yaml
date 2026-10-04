@@ -1,5 +1,8 @@
 packages:
   - 'apps/*'
+# Keep generated React Native C++ source paths below Windows MAX_PATH.
+virtualStoreDir: .pnpm
+virtualStoreDirMaxLength: 40
 allowBuilds:
   '@prisma/client': false
   better-sqlite3: false

@@ -7,6 +7,7 @@
     "android": "pnpm --filter @ringmemo/mobile android",
     "lint": "pnpm -r --if-present lint",
     "typecheck": "pnpm -r --if-present typecheck",
-    "check:expo": "cd apps/mobile && pnpm dlx expo-doctor"
+    "check:expo": "cd apps/mobile && pnpm dlx expo-doctor",
+    "test": "pnpm --filter @ringmemo/mobile test"
   }
 }

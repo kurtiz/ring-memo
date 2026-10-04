@@ -1,5 +1,7 @@
 node_modules/
 .pnpm-store/
+.pnpm/
+.cxx/
 .expo/
 dist/
 apps/mobile/android/
@@ -12,3 +14,9 @@ apps/worker/.dev.vars
 .hot-updater/
 *.tsbuildinfo
 .DS_Store
+.tools/
+.gradle/
+artifacts/
+apps/mobile/modules/*/android/build/
+apps/mobile/modules/*/android/.cxx/
+.idea
